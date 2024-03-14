@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/postgres
+    username: postgres
+    password: postgres
+  liquibase:
+    change-log: db_change_log.xml
+server:
+  port: 8081

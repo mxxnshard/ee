@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Login</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <strong>Название</strong>
+        </div>
+        <div class="col">
+            <strong>Размер</strong>
+        </div>
+        <div class="col">
+
+        </div>
+        <div class="col">
+
+        </div>
+    </div>
+    <form th:each="insect :${insects}" action="/web/insects" method="post">
+        <div class="row">
+            <div class="col">
+                <input type="text" name="name" th:value="${insect.name}" style="border: none">
+            </div>
+            <div class="col">
+                <input type="number" name="size" th:value="${insect.size}" style="border: none">
+            </div>
+            <input hidden="true" name="id" th:value="${insect.id}" style="border: none"/>
+            <button type="submit" name="edit" value="edit" class="col btn">Изменить</button>
+            <button type="submit" name="delete" value="delete" class="col btn">Удалить</button>
+        </div>
+    </form>
+<div class="row">
+    <div class="col">
+
+    </div>
+    <div class="col">
+        <form action="/web/insects/insert" method="post">
+            <div class="col">
+                <input type="text" name="newName" style="border: none">
+            </div>
+            <div class="col">
+                <input type="number" name="newSize" style="border: none">
+            </div>
+            <button type="submit" name="insert" class="col btn">Вставить</button>
+        </form>
+    </div>
+    <div class="col">
+
+    </div>
+</div>
+<div class="row">
+</div>
+<div class="row">
+    <div class="col">
+
+    </div>
+    <div class="col">
+        <a href="/" class="btn btn-primary">Return to home</a>
+    </div>
+    <div class="col">
+
+    </div>
+</div>
+</div>
+
+<script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

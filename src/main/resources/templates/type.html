@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Login</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <strong>Название</strong>
+        </div>
+    </div>
+    <form th:each="type :${types}" action="/web/types" method="post">
+        <div class="row">
+            <div class="col">
+                <input type="text" name="name" th:value="${type.name}" style="border: none">
+            </div>
+            <input hidden="true" name="id" th:value="${type.id}" style="border: none"/>
+            <button type="submit" name="edit" value="edit" class="col btn">Изменить</button>
+            <button type="submit" name="delete" value="delete" class="col btn">Удалить</button>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col">
+
+        </div>
+        <div class="col">
+            <form action="/web/types/insert" method="post">
+                <div class="col">
+                    <input type="text" name="newName" style="border: none">
+                </div>
+                <button type="submit" name="insert" class="col btn">Вставить</button>
+            </form>
+        </div>
+        <div class="col">
+
+        </div>
+    </div>
+    <div class="row">
+    </div>
+    <div class="row">
+        <div class="col">
+
+        </div>
+        <div class="col">
+            <a href="/" class="btn btn-primary">Return to home</a>
+        </div>
+        <div class="col">
+
+        </div>
+    </div>
+</div>
+
+<script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

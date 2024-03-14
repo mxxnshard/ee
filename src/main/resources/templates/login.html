@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Login</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col">
+
+        </div>
+        <div class="col">
+            <form action="/web/user/login" method="post">
+                <div class="mb-3">
+                    <label for="input_email" class="form-label">Email</label>
+                    <input name="email" class="form-control" placeholder="Enter email" type="text" id="input_email">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input name="password" class="form-control" placeholder="Password" type="password" id="password">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+        <div class="col">
+            <a href="/web/user/register">Зарегестрироваться</a>
+        </div>
+    </div>
+</div>
+
+
+<script src="/js/bootstrap.min.js"></script>
+</body>
+</html>
