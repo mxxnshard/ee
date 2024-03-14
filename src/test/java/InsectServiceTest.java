@@ -36,7 +36,7 @@ public class InsectServiceTest {
     }
     @Test
     void insert(){
-        String name = "обувь";
+        String name = "насекомые";
         String userId = "userId";
         String uuid = UUID.randomUUID().toString();
         InsectDto dto = new InsectDto(userId, name, 4);
@@ -49,7 +49,7 @@ public class InsectServiceTest {
 
     @Test
     void edit(){
-        String name = "обувь";
+        String name = "насекомые";
         String userId = "userId";
         String uuid = UUID.randomUUID().toString();
         InsectDto dto = new InsectDto(userId, name, 4);
